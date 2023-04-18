@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_container"
+    android:background="#1EFFFFFF"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/txsubar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="@dimen/dimen14sp"
+        android:textDirection="rtl"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Osama Sayed" />
+
+    <TextView
+        android:id="@+id/txtsuen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textDirection="rtl"
+
+        app:layout_constraintStart_toStartOf="@+id/txsubar"
+        app:layout_constraintTop_toBottomOf="@+id/txsubar"
+        tools:text="Android Developer at Visions-tech" />
+
+
+
+    <TextView
+        android:id="@+id/txtcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textDirection="rtl"
+
+        app:layout_constraintEnd_toEndOf="@+id/txtsuen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/txtsuen"
+        tools:text="26 years old" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_fill_red"         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcode" />
+</androidx.constraintlayout.widget.ConstraintLayout>

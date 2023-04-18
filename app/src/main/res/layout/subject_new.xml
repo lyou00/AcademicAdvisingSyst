@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/item_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_dp"
+            android:text="اضافة مادة"
+            android:textColor="#607D8B" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:onClick="onBackClick"
+            android:src="@drawable/back_button"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="اسم المادة عربي"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        tools:ignore="NotSibling">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectNameAr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_gray_solid"
+            android:inputType="textCapWords"
+            android:padding="@dimen/medium_padding"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="اسم المادة انجليزي"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectNameEn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_gray_solid"
+            android:inputType="date"
+            android:padding="@dimen/medium_padding"
+            android:singleLine="true"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="رمز المادة"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectNameCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_gray_solid"
+            android:inputType="textCapWords"
+            android:padding="@dimen/medium_padding"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="عدد الساعات"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCountTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_gray_solid"
+            android:inputType="textCapWords"
+            android:padding="@dimen/medium_padding"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLay1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="عدد الساعات"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLay"
+                app:layout_constraintStart_toStartOf="@+id/textInputLay"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLay">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLay12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="عدد الساعات"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLay1"
+                app:layout_constraintStart_toStartOf="@+id/textInputLay1"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLay1">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLay13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="عدد الساعات"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLay12"
+                app:layout_constraintStart_toStartOf="@+id/textInputLay12"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLay12">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLay14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="عدد الساعات"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLay13"
+                app:layout_constraintStart_toStartOf="@+id/textInputLay13"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLay13">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLay15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="عدد الساعات"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLay14"
+                app:layout_constraintStart_toStartOf="@+id/textInputLay14"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLay14">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLay15"
+        app:layout_constraintStart_toStartOf="@+id/textInputLay15"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLay15">
+
+        <RadioButton
+            android:id="@+id/rdSubDemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimen20sp"
+            android:gravity="center"
+            android:checked="false"
+            android:text="متطلب"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rdSubDemandNot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+
+            android:textSize="@dimen/dimen20sp"
+            android:gravity="center"
+            android:text="غير متطلب"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/rdSubOretical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimen20sp"
+            android:gravity="center"            android:checked="true"
+            android:text="نظري"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rdSubOreticalAndPractical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimen20sp"
+            android:gravity="center"
+            android:text="نظري و عملي"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
+    <TextView
+    android:id="@+id/spinerS"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/dimen25sp"
+    android:layout_marginRight="@dimen/dimen12dp"
+    android:layout_height="50dp"
+        android:text="اختار المتطلب"
+        android:textSize="@dimen/dimen25sp"
+        android:gravity="center"
+        android:visibility="invisible"
+
+        android:paddingLeft="@dimen/dimen24dp"
+    android:paddingRight="@dimen/dimen24dp"
+    app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+    app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+    app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+    android:padding="@dimen/dimen5dp" />
+    <Spinner
+        android:id="@+id/spinerSubject"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dimen25sp"
+        android:layout_marginRight="@dimen/dimen12dp"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/dimen24dp"
+        android:paddingRight="@dimen/dimen24dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinerS"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/spinerS"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="@dimen/dimen5dp" />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/rounded_orange_solid"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tx_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinerSubject"
+        app:layout_constraintTop_toBottomOf ="@+id/spinerSubject"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinerSubject"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
